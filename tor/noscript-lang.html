@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>NoScript Language Leak</title>
+    </head>
+    <body>
+        <object data="test"></object>
+        <script>
+            function checkForNoScript(){
+                if(document.getElementsByTagName("a").length != 0){
+                    alert("Locale text:" + document.getElementsByTagName("a")[0].firstChild.firstChild.title);
+                    clearInterval(interval);
+                }
+            }
+            var interval = setInterval(checkForNoScript,1000)
+        </script>
+    </body>
+</html>

